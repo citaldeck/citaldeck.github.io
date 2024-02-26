@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protected Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        z-index: 9999;
+    }
+    .login-box {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="overlay" id="overlay">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</div>
+
+<div id="content" style="display:none;">
+    <!-- Your protected content goes here -->
+    <h1>Welcome to the protected page!</h1>
+    <p>This content is hidden until you log in.</p>
+</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        // Here, you would typically send this information to a server for authentication
+        // For demonstration, let's just alert the values
+        alert("Username: " + username + "\nPassword: " + password);
+        
+        // After successful authentication, show the content and hide the login overlay
+        document.getElementById("content").style.display = "block";
+        document.getElementById("overlay").style.display = "none";
+    });
+</script>
+
+</body>
+</html>
