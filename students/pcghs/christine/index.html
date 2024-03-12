@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Abel&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Merriweather:wght@400;700&family=Oswald:wght@400;700&family=Barlow:wght@400;700&family=Assistant:wght@400;700&family=Urbanist:wght@400;700&display=swap">
+	<link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+
+	<div class="main-content">
+	    <section class="single-column-section image-section">
+			<h3>Troubleshooting Microstation File</h3>
+			<img src="1.png">
+			<p>What happened is when I clicked on fit view, it is suppose to zoom into to your building but instead it zoomed out very far until we barely notice the dots on the screen.</p>
+			<br>
+			<br>
+			<img src="2.png">
+			<p>Notice that when I select the first dot, your building and models are not selected. That means there is some rogue element that may have been accidently created far away from your building. That is why in Lumen RT you cant see a thing because it has been zoomed out quite a distance away.</p>
+			<br>
+			<br>
+			<img src="3.png">
+			<p>Only when I select the second last dot in the line of dots on the map, is your building selected. </p>
+			<br>
+			<br>
+			<img src="4.png">
+			<p>The last object is some kind of light object which may have also been accidently created.</p>
+			<br>
+			<br>
+			<img src="5.png">
+			<p>So what we do is we delete the light object and we select all the rogue dots you see on the screen except the dot that is actually your model building.</p>
+			<br>
+			<br>
+			<img src="6.png">
+			<p>Then we delete all those rogue dots and only select the dot that is your building. You will see that when I select that dot, your models in the second window are selected.</p>
+			<br>
+			<br>
+			<img src="7.png">
+			<p>Finally when I click "Fit View" in the first window, it will zoom in to your model which it is suppose to do.</p>
+			
+			<h3>Fixed Microstation File</h3>
+			<img src="8.png">
+			<p>I have fixed your file and you can download it <a href="christine4.dgn">here.</a> Now you can open this file in Lumen RT and you should see your building.</p>
+			
+			<br>
+			<p>Feel free to ask me if you have any questions.</p>
+			
+		</section>
+    </div>
+	
+	<footer>
+		<div class="footer-links">
+			<div class="footer-column social-icons">
+				<a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+				<a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+				<a href="#" target="_blank" title="Instagram"><i class="fab fa-whatsapp"></i></a>
+			</div>
+			<div class="footer-column">
+				<a href="../index.html">Menu</a>
+			</div>
+			<div class="footer-column">
+				<img src="./imgs/logos/firm.jpg" alt="Small Logo" class="small-logo">
+			</div>
+		</div>
+		<p>&copy; Copyright Psyblade 2024. All Rights Reserved</p>
+		
+	</footer>
+
+    <!-- Font Awesome icons (you can include this in your project or use a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</body>
+</html>
