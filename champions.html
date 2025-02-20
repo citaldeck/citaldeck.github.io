@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self Bio Tutorial</title>
+    <title>Champions</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Abel&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Merriweather:wght@400;700&family=Oswald:wght@400;700&family=Barlow:wght@400;700&family=Assistant:wght@400;700&family=Urbanist:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap">
 	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/nav.css">
+	<link rel="stylesheet" href="./css/polaroid.css">
     <style>
         .main-content {
             max-width: 1200px;
@@ -22,11 +24,6 @@
             text-align: center;
         }
 		
-		a {
-			text-decoration:none;
-			color:white;
-		}
-		
         h1 {
             font-family: 'Lato', sans-serif;
             font-size: 64px;
@@ -36,8 +33,11 @@
         img {
             max-width: 100%;
             height: auto;
-            margin-bottom: 15px;
         }
+		
+		.main-content img {
+			margin-bottom:15px;
+		}
         
         .two-column {
             display: flex;
@@ -54,41 +54,6 @@
             text-align: center;
         }
         
-        .polaroid {
-            background: white;
-            padding: 15px 15px 45px 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            display: inline-block;
-            margin: 20px;
-            transform: rotate(var(--rotation));
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-        
-        .polaroid:hover {
-            transform: rotate(var(--rotation)) scale(1.05);
-            z-index: 1;
-        }
-        
-        .polaroid img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            display: block;
-        }
-        
-        .handwritten {
-            font-family: 'Homemade Apple', cursive;
-            color: #1a1a1a;
-            font-size: 16px;
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            text-align: center;
-        }
-        
         h3 {
             margin-bottom: 20px;
             font-size: 24px;
@@ -98,20 +63,32 @@
             .two-column {
                 flex-direction: column;
             }
-            .polaroid {
-                transform: rotate(0deg) !important;
-            }
-            .polaroid:hover {
-                transform: rotate(0deg) scale(1.05) !important;
-            }
         }
 		
 		.medal {
 			max-width:300px;
 		}
     </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
+    <nav>
+        <div class="logo-title">
+            <a href="./index.html" class="active"><img src="./imgs/logos/logo1.png" alt="Logo"></a>
+            <a href="./index.html" class="active"><h1>Digitech Penang</h1></a>
+        </div>
+		<div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+		<div class="menu">
+            <a href="./index.html" class="active">Home</a>
+            <a href="./champions.html">Champions</a>
+            <a href="./menu.html">Lesson Plan</a>
+        </div>
+    </nav>
     <div class="main-content">
         <!-- Row 1: Single image with link -->
         <div class="row single-column">
@@ -154,7 +131,7 @@
 				<a href="./voyza">
 					<img style="width:100%;" src="./imgs/champions/PCGHS.JPG" alt="Netro Render">
 				</a>
-				<div class="handwritten">Netro ~ Voyza (SMJK Penang Chinese Girls High School)</div>
+				<div class="handwritten">PCGHS Netro/Voyza Design</div>
 			</div>
         </div>
 		
@@ -171,13 +148,13 @@
             <div class="column">
 				<div class="polaroid" style="--rotation: 0deg;">
 					<img src="./imgs/champions/PLGR0657.JPG" alt="Tutorial Step 3">
-					<div class="handwritten">Team Phoenix (SMK Abdullah Munshi)</div>
+					<div class="handwritten">Team SMK Abdullah Munshi</div>
 				</div>
 			</div>
             <div class="column">
 				<div class="polaroid" style="--rotation: 0deg;">
 					<img src="./imgs/champions/abdullahmunshi.jpg" alt="Tutorial Step 4">
-					<div class="handwritten">Phoenix ~ Samara (SMK Abdullah Munshi)</div>
+					<div class="handwritten">Phoenix ~ Samara Design</div>
 				</div>
 				<div class="polaroid" style="--rotation: 0deg;">
 					<img src="./imgs/champions/IMG_6731.JPG" alt="Tutorial Step 3">
@@ -189,7 +166,7 @@
 		<div class="row single-column">
 			<div class="polaroid" style="--rotation: 0deg;">
 				<img src="./imgs/champions/abdullahmunshi.jpg" alt="Tutorial Step 4">
-				<div class="handwritten">Phoenix ~ Samara (SMK Abdullah Munshi)</div>
+				<div class="handwritten">SMK Abdullah Munshi Design</div>
 			</div>
 		</div>
 		
@@ -219,7 +196,7 @@
 					<a href="https://chat.openai.com">
 						<img src="./imgs/champions/IMG_6730.JPG" alt="Team 3">
 					</a>
-					<div class="handwritten">Team 3 (Penang Chinese Girls High School)</div>
+					<div class="handwritten">Team 3 (PCGHS)</div>
 				</div>
 				<div class="polaroid" style="--rotation: 0deg;">
 					<a href="https://chat.openai.com">
@@ -233,7 +210,7 @@
 		<div class="row single-column">
 			<div class="polaroid" style="--rotation: 0deg;">
 				<img src="./imgs/champions/saujanaindah.jpg" alt="SMK Saujanah Indah">
-				<div class="handwritten">Team Powerpuff Girls and Team Guys (SMK Saujanah Indah)</div>
+				<div class="handwritten">SMK Saujanah Indah</div>
 			</div>
 		</div>
 		
@@ -242,13 +219,13 @@
             <div class="column">
 				<div class="polaroid" style="--rotation: 0deg;">
 					<img src="./imgs/champions/indah3.JPG" alt="Saujana Indah">
-					<div class="handwritten">Team Powerpuff Girls (Saujana Indah)</div>
+					<div class="handwritten">Team Powerpuff Girls Design</div>
 				</div>
 			</div>
             <div class="column">
 				<div class="polaroid" style="--rotation: 0deg;">
 					<img src="./imgs/champions/indah4.JPG" alt="Saujana Indah">
-					<div class="handwritten">Team Guys (Saujana Indah)</div>
+					<div class="handwritten">Team Guys Design</div>
 				</div>
 			</div>
         </div>
@@ -265,13 +242,12 @@
                 <a href="#" target="_blank" title="Instagram"><i class="fab fa-whatsapp"></i></a>
             </div>
             <div class="footer-column">
-                <a href="../index.html">Menu</a>
             </div>
             <div class="footer-column">
                 <img src="./imgs/logos/firm.jpg" alt="Small Logo" class="small-logo">
             </div>
         </div>
-        <p>&copy; Copyright Psyblade 2024. All Rights Reserved</p>
+        <p>&copy; Copyright Psyblade 2023-2025. All Rights Reserved</p>
     </footer>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

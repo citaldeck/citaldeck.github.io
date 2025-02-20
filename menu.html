@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/menu-accordion.css">
 	<link rel="stylesheet" href="./css/menu-content.css">
+	<link rel="stylesheet" href="./css/nav.css">
+	<link rel="stylesheet" href="./css/polaroid.css">
 	<style>
 		.header {
 			display: flex;
@@ -16,7 +18,6 @@
 			position: relative;
 			padding: 20px;
 		}
-
 
 		#responsive-image {
 			max-width: 600px;
@@ -138,13 +139,27 @@
 				font-size:1.5em;
 			}
 		}
-
-
 </style>
+<script>
+	function toggleMenu() {
+		const menu = document.querySelector('.menu');
+		menu.classList.toggle('show');
+	}
+</script>
 </head>
 <body>
-	
-	
+    <nav>
+        <div class="logo-title">
+            <a href="./index.html" class="active"><img src="./imgs/logos/logo1.png" alt="Logo"></a>
+            <a href="./index.html" class="active"><h1>Digitech Penang</h1></a>
+        </div>
+		<div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+		<div class="menu">
+            <a href="./index.html" class="active">Home</a>
+            <a href="./champions.html">Champions</a>
+            <a href="./menu.html">Lesson Plan</a>
+        </div>
+    </nav>
 	<div class="header">
 		<img id="logo" src="./imgs/logos/logo1.png" alt="logo">
 		<!--img id="responsive-image" src="./imgs/champions/banner2.png" alt="Responsive Image"-->
@@ -154,7 +169,7 @@
     <div class="jumbotron" onclick="playVideo()">
 		<div id="titles">
 			<h1>The Harmony Citaldeck</h1>
-			<h2>Penang State Administrative Center</h2>
+			<h2>Lesson Plan Sample Video Deliverable</h2>
 			<h2>▸ Click to Play Video</h2>
 		</div>
         <iframe 
