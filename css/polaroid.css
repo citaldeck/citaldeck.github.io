@@ -1,0 +1,43 @@
+.polaroid {
+	background: white;
+	padding: 15px 15px 45px 15px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	display: inline-block;
+	margin: 20px;
+	transform: rotate(var(--rotation));
+	transition: transform 0.3s ease;
+	position: relative;
+}
+
+.polaroid:hover {
+	transform: rotate(var(--rotation)) scale(1.05);
+	z-index: 1;
+}
+
+.polaroid img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.handwritten {
+	font-family: 'Homemade Apple', cursive;
+	color: #1a1a1a;
+	font-size: 16px;
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.polaroid {
+		transform: rotate(0deg) !important;
+	}
+	.polaroid:hover {
+		transform: rotate(0deg) scale(1.05) !important;
+	}
+}
